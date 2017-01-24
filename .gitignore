@@ -2,3 +2,10 @@ node_modules/
 npm-debug.log*
 
 content/themes/casper/
+
+core/
+
+config.example.js
+Gruntfile.js
+npm-shrinkwrap.json
+config.codekit3
