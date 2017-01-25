@@ -11,11 +11,10 @@
         <link rel="stylesheet" type="text/css" href="{{asset "css/caffeine-theme-min.css"}}" />
         {{> head-css}}
         {{ghost_head}}
-{{!--         {{> headscript}} --}}
     </head>
     <body class="{{body_class}}">
-        {{> header}}
         {{> aside}}
+        {{> header}}
         <main class="animated">
             <section class="content">
                 {{{body}}}
@@ -23,9 +22,10 @@
             </section>
         </main>
         {{> tags-overlay}}
-        {{ghost_foot}}
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="{{asset "js/caffeine-theme-min.js"}}" type="text/javascript" charset="utf-8"></script>
+        {{ghost_foot}}
         {{> google-analytics}}
         {{> disqus-comment-count}}
     </body>

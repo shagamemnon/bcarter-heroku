@@ -10,6 +10,13 @@ html,
 body {
     height: 100%;
     min-height: 100%;
+    width: 100%;
+    margin: 0;
+    color: #222;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    z-index: 2;
 
     &.expanded {
         overflow-y: hidden;
@@ -19,7 +26,7 @@ body {
 body {
     font-family: $sans-font-fallback;
     color: $gray-darker;
-    background: $gray-lighter;
+    background: #f5f6f6;
 }
 
 .fonts-loaded body {

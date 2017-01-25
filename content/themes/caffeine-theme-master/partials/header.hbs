@@ -1,12 +1,5 @@
-<a id="menu-icon" style="line-height: 30px;background:red;padding:5px 10px;text-align:center;position:absolute;z-index:20000;top: 10px;right: 10px">
-  <i style="color:white;-webkit-transform:scale(1.5)" class="fa fa-bars hvr-grow"></i>
-</a>
-<header id="default-nav-header" class="nav-header nav-header-fixed animated">
-    <a id="home-button" href="{{@blog.url}}">
-{{!--         <img src="{{asset "img/icons/icon.png"}}" alt="{{@blog.title}} icon" class="icon rounded hvr-buzz-out" /> --}}
-        <img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="hvr-buzz-out" />
-      </a>
-    <a class="tags-button right">
-        <i class="fa fa-search hvr-grow"></i>
-    </a>
-</header>
+{{navigation}}
+
+<div class="blog-header">
+        <h1 class="profile-title">{{@blog.description}}</h1>
+</div>

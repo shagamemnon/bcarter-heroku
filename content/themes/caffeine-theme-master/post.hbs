@@ -3,7 +3,8 @@
 {{#post}}
 
   <article class="{{post_class}}">
-    {{> material-cover}}
+  {{> material-cover }}
+
     <div class="post-card animated fade-in">
         <a id="back-button" href="#open" title="Go back" class="hvr-grow">
             <div class="back-button">
@@ -11,11 +12,13 @@
             </div>
         </a>
         <div class="post-container">
-            {{#if image}}
-            <figure id="main">
-                <div class="main-image" style="background-image:url({{image}})">
-            </figure>
-            {{/if}}
+              {{#if image}}
+    <figure id="main">
+        <div class="main-image" height="400px" style="background-image:url({{image}})">
+    </figure>
+  {{/if}}
+
+            
             <div class="post-header">
                 <div class="meta">
                     <time datetime="{{date published_at format="MMMM DD, YYYY"}}">{{date published_at timeago="true"}}</time>
