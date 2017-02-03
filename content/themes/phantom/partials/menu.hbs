@@ -1,0 +1,24 @@
+<div id="panel" class="panel slideout-panel slideout-panel-right">
+    <header class="panel-header">
+      <button class="btn-hamburger js-slideout-toggle"><span>☰</span><a class="header-font">Menu</a></button>
+  </header>
+</div>
+<nav id="menu" class="menu slideout-menu slideout-menu-right">
+{{!--     <a class="tags-button right" href="#search">
+        <span><i class="fa fa-search hvr-grow"></i></span>
+        <span>Search Brandon's posts & videos</span>
+    </a> --}}
+    <h3>BrandonCarter.com</h3>
+    <section class="menu-section">
+      <ul class="menu-section-list">
+        {{#foreach navigation}}
+        <li class="nav-{{slug}} {{#if current}} nav-current{{/if}}">
+            <a href="{{this.url}}">{{label}}</a>
+        </li>
+        {{/foreach}}
+        <li class="subscribe-button nav-blog hide {{#if current}} nav-current{{/if}}">
+            <a class="subscribe-link" href="{{@blog.url}}/#open" title="subscribe">Subscribe</a>
+        </li>
+      </ul>
+    </section>
+</nav>

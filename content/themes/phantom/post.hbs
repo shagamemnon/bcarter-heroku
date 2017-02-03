@@ -23,9 +23,15 @@
         <article class="{{post_class}}">  
         {{#post}}
               
-         <header>                
-                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+         <header>
+                <h2 class="post-page post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                
+                <hr style="border-color:#999;margin: 18px auto 6px">
                 <div class="post-meta"><span class="author"><i class="fa fa fa-user fa-fw"></i> {{author}} </span> <span class="post-time"><i class="fa fa fa-calendar fa-fw"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}} </time> </span> {{#if tags}} <span class="post-tags "> <i class="fa fa-tags fa-fw"></i> {{tags separator=" | "}} {{/if}}</span> </div>
+                <hr style="border-color:#999;margin: 6px auto 18px">
+                <div class="post-header-image" style="background-image:url({{image}})"></div>
+                <br>
+
          </header>
 
             <section class="post-content">
