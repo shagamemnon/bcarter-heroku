@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Oswald";
+  src: url('/assets/fonts/Oswald-Bold.ttf');
+  font-weight: 700;
+}
+
 h1, h2, h3, h4, h5, h6, nav a, .post-title, h2.post-title { 
   letter-spacing: 1px !important 
 }
@@ -9,6 +15,8 @@ p {
 p > a {
   color: #2484CC;
 }
+
+[type=submit]{ background: #CC4136; min-width: 100px; max-width: 100%; display:block;padding: 10px 3px; border: none;color: white;text-transform:uppercase;cursor:pointer;}
 
 .toast, #toast-container { top: 0; width: 100vw;max-width:100%;left:0;right:0;background-color:red }
 #toast-container * {box-shadow: none !important }

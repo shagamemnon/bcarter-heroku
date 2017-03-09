@@ -6,32 +6,50 @@
 {{! The main content area on the homepage }}
 <main class="content" role="main">
 
-    <!-- Page Sidebar -->
-        {{! The tag below includes the page sidebar - partials/page-sidebar.hbs }}
 
-        {{> "page-sidebar"}}
-
-
-    <!-- Page Content -->
-
-    {{! Each post will be output using this markup }}
-
-    <div class='post-holder'>    
+    <div class='page-holder' style="background-color:#f6f6f6">    
             
         {{! Everything inside the #post tags pulls data from the post }}
 
         <article class="{{post_class}}">  
         {{#post}}
               
-            <h1 class="page-title">{{{title}}}</h1>
-            
+         <header>
+            <div class="post-header-image" style="width:100vw; background-image:url({{image}})" data-greta="{{image}}"></div>
+            <br>
+            <h1 class="post-page post-title">{{{title}}}</h2>
+            <br>
+         </header>
+
             <section class="post-content">
                 {{content}}
             </section>
 
+
+            <footer class="post-footer">
+
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span><i class="fa fa-twitter"></i></span>                        
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span><i class="fa fa-facebook"></i></span>
+                    </a>
+                    <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                       <span><i class="fa fa-google-plus"></i></span>
+                    </a>
+                </section>
+
+                <hr>
+
+
+            </footer>
             {{/post}}
     
-        </article>   
-
+        </article>        
     </div>
 </main>

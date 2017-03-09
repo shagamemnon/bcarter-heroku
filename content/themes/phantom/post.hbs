@@ -29,7 +29,7 @@
                 <hr style="border-color:#999;margin: 18px auto 6px">
                 <div class="post-meta"><span class="author"><i class="fa fa fa-user fa-fw"></i> {{author}} </span> <span class="post-time"><i class="fa fa fa-calendar fa-fw"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}} </time> </span> {{#if tags}} <span class="post-tags "> <i class="fa fa-tags fa-fw"></i> {{tags separator=" | "}} {{/if}}</span> </div>
                 <hr style="border-color:#999;margin: 6px auto 18px">
-                <div class="post-header-image" style="background-image:url({{image}})"></div>
+                <div class="post-header-image" style="background-image:url({{image}})" data-greta="{{image}}"></div>
                 <br>
 
          </header>
@@ -42,7 +42,7 @@
             <footer class="post-footer">
 
                 <section class="author">
-                    <img class="author-avatar" src="{{author.image}}">
+                    <img class="author-avatar" src="{{author.image}}" data-greta="{{author.image}}">
                     <h4>{{author.name}}</h4>
                     <p>{{author.bio}}</p>
                 </section>
@@ -64,9 +64,11 @@
                 </section>
 
                 <hr>
+                </footer>
+            {{/post}}
 
         {{! Discuss Comment Integration}}
-            <section class="post-comment">
+{{!--             <section class="post-comment">
                 <div id="disqus_thread"></div>
                 <script type="text/javascript">
                     var disqus_shortname = 'example'; // required: replace example with your forum shortname
@@ -81,10 +83,8 @@
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 <a href="http://disqus.com" class="dsq-brlink">Leave a Reply <span class="logo-disqus"></span></a>
-            </section> <!-- Discuss Comment End -->
+            </section> <!-- Discuss Comment End --> --}}
 
-            </footer>
-            {{/post}}
     
         </article>        
     </div>
